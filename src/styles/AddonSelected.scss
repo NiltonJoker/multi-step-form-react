@@ -1,0 +1,19 @@
+
+.addon-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & .addon-title {
+    color: $cool-gray;
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  & .addon-price {
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0;
+    color: $margin-blue;
+  }
+}

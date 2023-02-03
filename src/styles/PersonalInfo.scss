@@ -1,0 +1,90 @@
+.form-fields {
+  display: flex;
+  flex-direction: column;
+  min-height: 250px;
+  height: 250px;
+  overflow: auto;
+  gap: 15px;
+
+  & .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 1px;
+
+    & label {
+      font-size: 16px;
+      color: $margin-blue;
+    }
+
+    & input {
+      border-radius: 8px;
+      border: 1px solid $light-gray;
+      padding: 12px 15px;
+      font-size: 16px;
+      font-family: "Ubuntu";
+      font-weight: 570;
+      color: $margin-blue;
+
+      &::placeholder {
+        color: $cool-gray;
+        font-weight: 500;
+      }
+
+      &:active,
+      &:focus,
+      &:focus-visible {
+        outline: 2px solid $purplish-blue;
+      }
+    }
+  }
+  
+  @media screen and (max-width: 1024px) {
+    & .form-group {
+      gap: 5px;
+      & label {
+        font-size: 14px;
+      }
+
+      & input {
+        font-size: 14px;
+        &::placeholder {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+// & .main__btn {
+//   display: flex;
+//   margin: auto;
+//   width: 80%;
+//   justify-content: space-between;
+//   align-items: center;
+//   flex-direction: row-reverse;
+
+//   & button {
+//     cursor: pointer;
+//     font-weight: 500;
+//     font-size: 16px;
+//     padding: 15px 25px;
+//     border-radius: 8px;
+//     color: $white;
+//     background-color: $margin-blue;
+//     border: none;
+
+//     &:hover {
+//       background-color: lighten($color: $margin-blue, $amount: 5%);
+//     }
+
+//     &.main__btn-back {
+//       background-color: transparent;
+//       color: $cool-gray;
+
+//       &:hover {
+//         background-color: lighten($color: $cool-gray, $amount: 30%);
+//       }
+//     }
+//   }
+// }

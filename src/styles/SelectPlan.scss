@@ -1,0 +1,82 @@
+.plans-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  & .plans-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: center;
+
+    & .plan-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px 15px;
+      border: 1px solid $light-gray;
+      gap: 40px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease-in;
+
+      &.active {
+        border: 1px solid $purplish-blue;
+        background-color: $magnolia;
+      }
+      &:hover {
+        background-color: $magnolia;
+      }
+
+      & .card-body {
+        & .card-title {
+          font-weight: 700;
+          margin-bottom: 8px;
+          font-size: 18px;
+        }
+
+        & .card-price {
+          color: $cool-gray;
+          // margin-bottom: 10px;
+          font-size: 16px;
+        }
+
+        & .card-promotion {
+          margin-top: 8px;
+          font-size: 14px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    gap: 20px;
+    & .plans-container {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      gap: 10px;
+      & .plan-card {
+        flex-direction: row;
+        justify-content: start;
+        gap: 20px;
+        padding: 15px 10px;
+
+        & .card-body {
+          & .card-title {
+            margin-bottom: 2px;
+            font-size: 16px;
+          }
+          & .card-price {
+            font-size: 14px;
+          }
+
+          & .card-promotion {
+            margin-top: 2px;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

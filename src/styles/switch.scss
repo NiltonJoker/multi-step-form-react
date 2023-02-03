@@ -1,0 +1,65 @@
+.switch-container {
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $magnolia;
+  padding: 10px 5px;
+  border-radius: 5px;
+
+  & .switch-label {
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
+    color: $cool-gray;
+    font-weight: 500;
+    &.active {
+      font-weight: 700;
+      color: $margin-blue;
+    }
+  }
+
+  & label .switch-item {
+    height: 30px;
+    width: 55px;
+    background-color: $margin-blue;
+    cursor: pointer;
+    border-radius: 50px;
+
+    position: relative;
+
+    &::after {
+      content: "";
+
+      width: 16px;
+      border-radius: 50%;
+      position: absolute;
+      top: 7px;
+      left: 6px;
+      height: 16px;
+      background-color: $white;
+      transition: all 0.3s ease-in;
+    }
+
+    &.switch-active {
+      &::after {
+        transform: translateX(26px);
+
+      }
+  
+    }
+
+    & .switch-checkbox {
+      display: none;
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    & .switch-label {
+      font-size: 14px;
+    }
+  }
+}

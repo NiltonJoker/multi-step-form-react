@@ -1,0 +1,55 @@
+.main__btn {
+  display: flex;
+  margin: auto;
+  width: 80%;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+
+  & button {
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 15px 25px;
+    border-radius: 8px;
+    color: $white;
+    background-color: $margin-blue;
+    border: none;
+
+    transition: all 0.3s ease-in;
+
+    &:hover {
+      background-color: lighten($color: $margin-blue, $amount: 5%);
+    }
+
+    &.main__btn-confirm {
+      background-color: $purplish-blue;
+
+      &:hover {
+        background-color: lighten($color: $purplish-blue, $amount: 15%);
+      }
+    }
+
+    &.main__btn-back {
+      background-color: transparent;
+      color: $cool-gray;
+
+      &:hover {
+
+        color: $margin-blue;
+      }
+    }
+
+    &.btn-hidden {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    padding: 15px;
+    position: absolute;
+    bottom: -70px;
+    width: 100%;
+    background-color: $white;
+  }
+}

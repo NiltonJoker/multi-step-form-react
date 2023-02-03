@@ -1,0 +1,76 @@
+.addons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  & .addon-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px;
+    border: 1px solid $light-gray;
+    border-radius: 10px;
+
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &.active {
+      border: 1px solid $purplish-blue;
+      background-color: $magnolia;
+    }
+
+    & .addon-body {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      & .addon-check {
+        transform: scale(1.5);
+        accent-color: $purplish-blue;
+      }
+
+      & .addon-details {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        & p {
+          margin: 0;
+        }
+
+        & .addon-title {
+          font-size: 1rem;
+          font-weight: 700;
+          color: $margin-blue;
+          letter-spacing: 0px;
+        }
+        
+        & .addon-description {
+          font-size: 0.8rem;
+          color: $cool-gray;
+          letter-spacing: 0px;
+        }
+      }
+    }
+    & .addon-price {
+      margin: 0;
+      color: $purplish-blue;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    gap: 15px;
+
+
+    & .addon-card {
+      padding: 15px;
+
+      & .addon-body {
+        gap: 15px;
+      }
+    }
+  }
+}
